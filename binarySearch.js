@@ -26,7 +26,7 @@ var binarySearch = function(array, target, beg, end) {
 	return mid;
 	
 	} else if (beg >= end) {
-		// If the beginning index becomes greater than
+    // If the beginning index becomes greater than
 		// the end value, the 'target' element is either
 	  // not found or array may not be sorted.
     return -1
