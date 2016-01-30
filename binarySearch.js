@@ -5,8 +5,8 @@
 
 var binarySearch = function(array, target, beg, end) {
 
-	// Set the parameter value of 'beg' on recursive calls
-	// otherwise set its value to 0 if undefined.
+  // Set the parameter value of 'beg' on recursive calls
+  // otherwise set its value to 0 if undefined.
   beg = beg || 0;
 
   // Similar to above pattern without explicitly
@@ -23,19 +23,22 @@ var binarySearch = function(array, target, beg, end) {
   // Base case: return the index of the 'target'
   // when it matches the 'num' element.
   if (target === num) {
-		return mid;
+	return mid;
+	
+	} else if (beg >= end) {
 		// If the beginning index becomes greater than
 		// the end value, the 'target' element is either
-		// not found or array may not be sorted.
-	} else if (beg >= end) {
-		return -1
+	  // not found or array may not be sorted.
+    return -1
+            
 	} else if (target > num) {
-		// Recursively search right half of the array
-		// starting from the middle of the right half.
-		return binarySearch(array, target, mid+1, end);
+	    // Recursively search right half of the array
+	    // starting from the middle of the right half.
+	    return binarySearch(array, target, mid+1, end);
+	    
 	} else {
-		// Recursively search left half of the array
-		// starting the middle of the left half.
+	    // Recursively search left half of the array
+	    // starting the middle of the left half.
 		return binarySearch(array, target, beg, mid-1);	
 	};
 }
