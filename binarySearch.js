@@ -12,7 +12,7 @@ var binarySearch = function(array, target, beg, end) {
 	  // Similar to above pattern without explicitly
 	  // stating that 'end' might equal a new value.
 	  if (end === undefined) {
-	  	end = array.length-1;
+	    	  end = array.length-1;
 	  }
 	
 	  // Use the index values of 'beg' and 'end' to
@@ -32,13 +32,13 @@ var binarySearch = function(array, target, beg, end) {
                 return -1
             
 	} else if (target > num) {
-	    // Recursively search right half of the array
-	    // starting from the middle of the right half.
-	    return binarySearch(array, target, mid+1, end);
+	        // Recursively search right half of the array
+	        // starting from the middle of the right half.
+	        return binarySearch(array, target, mid+1, end);
 	    
 	} else {
-	    // Recursively search left half of the array
-	    // starting the middle of the left half.
+		// Recursively search left half of the array
+		// starting the middle of the left half.
 		return binarySearch(array, target, beg, mid-1);	
 	};
 }
