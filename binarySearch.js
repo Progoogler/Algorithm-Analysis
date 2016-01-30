@@ -5,8 +5,8 @@
 
 var binarySearch = function(array, target, beg, end) {
 
-	  // Set the parameter value of 'beg' on recursive calls
-	  // otherwise set its value to 0 if undefined.
+	  // Set the parameter value of the beginning index or 'beg' 
+	  // on recursive calls otherwise set its value to 0 if undefined.
 	  beg = beg || 0;
 	
 	  // Similar to above pattern without explicitly
