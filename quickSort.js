@@ -40,7 +40,7 @@ var partition = function(array, low, high) {
 	while (j < high) {
 
 		if (array[j] <= array[high]) {
-			// When current element is left than pivot,
+			// When current element is less than pivot,
 			// swap it with the pointer "i".
 			swap(array, i, j);
 			// Increment 'i' to point at the next
@@ -58,7 +58,11 @@ var partition = function(array, low, high) {
 };
 
 // Sort all elements of an array in place without a new array.
-// Changes order of the actual array input 
+// Quicksort's wort-case running time is 0(n^2) though its
+// average running time is O(n logn). It is preferred over
+// mergeSort because of the small constants in space complexity.
+// Note : Sorts the order of the original array reference
+// therefore it returns undefined. 
 var quickSort = function(array, low, high) {
 	if (low < high) {
 		var key = partition(array, low, high);
