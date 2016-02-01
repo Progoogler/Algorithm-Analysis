@@ -20,6 +20,7 @@ var randomPivot = function(array) {
 	random.sort(function(a,b) {
 		return a+b;
 	});
+	// Return the median of the 3 randomly chosen elements' index.
 	return array.indexOf(random[1]);
 };
 
