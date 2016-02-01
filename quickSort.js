@@ -13,7 +13,7 @@ var randomPivot = function(array) {
 		return array.indexOf(array[Math.ceil(array.length / 2)]);
 	}
 	var random = [];
-	num = Math.ceil(Math.random() * 10);
+	var num = Math.ceil(Math.random() * 10);
 	random.push(array[Math.ceil(array.length / num)]);
 	random.push(array[array.length - (Math.ceil(array.length / num))]);
 	random.push(array[Math.ceil(array.length / num) + Math.ceil(array.length / num)]);
