@@ -34,7 +34,11 @@
 * 	return result;
 * };
 * var sortMe = randomArray();
+<<<<<<< HEAD
 * mergeSort.sort(sortMe);
+=======
+* mergeSort(sortMe);
+>>>>>>> 2fc0c9a5feb382f564ab285b6a43209a080816d8
 *
 */
 var mergeSort = (function(){
