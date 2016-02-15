@@ -34,11 +34,7 @@
 * 	return result;
 * };
 * var sortMe = randomArray();
-<<<<<<< HEAD
 * mergeSort.sort(sortMe);
-=======
-* mergeSort(sortMe);
->>>>>>> 2fc0c9a5feb382f564ab285b6a43209a080816d8
 *
 */
 var mergeSort = (function(){
@@ -74,23 +70,18 @@ var mergeSort = (function(){
 			// If both arrays have elements to compare, keep doing
 			// sort comparisons.
 			if (left[i] < right[j]) {
-				result.push(left[i]);
-				left.shift(i);
+				result.push(left.shift());
 			} else {
-				result.push(right[j]);
-				right.shift(j);
+				result.push(right.shift());
 			}
 		}
 		while (left.length || right.length) {
 			// Push the remaining elements in either arrays into the
 			// result array.
 			if (left.length) {
-				result.push(left[i]);
-				left.shift(i);
-
+				result.push(left.shift());
 			} else {
-				result.push(right[j]);
-				right.shift(j);
+				result.push(right.shift());
 			}
 		}
 
