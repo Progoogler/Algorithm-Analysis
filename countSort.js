@@ -1,6 +1,6 @@
 /*
 * The omega bound of comparison sorts such as Quick Sort
-* and Merge Sort are O(n log n), and from the applicability
+* and Merge Sort are Ω(n log n), and from the applicability
 * of those types of sorts on certain data structures such
 * as linked-lists for Merge Sort or low memory overhead
 * costs for Quick Sort, makes them highly useful and quite
