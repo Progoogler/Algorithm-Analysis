@@ -8,14 +8,23 @@
 *
 * However, outside of comparison sorting, there are even
 * faster sorting algorithms, one namely Count Sort, that
-* boasts an impressive running-time of O(n)!
+* boasts an impressive running-time of O(n + k)!
 * 
 * Despite its space overhead and multiple for-loop
 * iterations with miniscule amounts of operations in each loop
 * keeping constants at bare minimums, Count Sort runs in
 * linear time with its single-loop variant operations.
 *
+* Application cases:
+*   1. Effeciency is achieved when the range of input elements
+*      is not greater than the number of elements to be sorted.
+*      I.e., 5, 10, 10000, 5000
+*   2. Space overhead is proportional to range of input so
+*      the case of #1 will play a role in determining this algorithm.
+*   3. Often utilized as a subroutine of another sorting algorithm
+*      such as Radix Sort.
 *
+* Test:
 * var randomArray = function(num) {
 *   var result = [];	
 *	  for (var n = 0; n < num; n++) {
