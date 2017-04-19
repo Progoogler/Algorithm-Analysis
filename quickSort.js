@@ -12,10 +12,10 @@ var swap = function(array, firstIndex, secondIndex) {
 var partition = function(array, low, high) {
 	// Var 'i' points to the border between all elements
 	// less than and greater than the pivot.
-	var i = low
-	    , j = low
+	var i = low,
+	 		j = low,
 	    // The 'pivot' variable is the middle index between high and low.
-	    , pivot = low + Math.ceil((high - low) / 2);
+	    pivot = low + Math.ceil((high - low) / 2);
 
 	// Swap the 'pivot' element into the 'high' index position to the right.
 	swap(array, pivot, high);
@@ -23,9 +23,9 @@ var partition = function(array, low, high) {
 	while (j < high) {
 
 		if (array[j] < array[high]) {
-			// Swap elements at 'j' index with 'i' when elements less than 
+			// Swap elements at 'j' index with 'i' when elements less than
 			// the pivot are found, shifting all elements less than pivot to
-			// the left of the subarray. 
+			// the left of the subarray.
 			swap(array, i, j);
 			i++;
 		}
@@ -44,13 +44,13 @@ var partition = function(array, low, high) {
 // average running time is O(n logn). It is preferred over
 // mergeSort because of the small constants in space complexity.
 // Note : Sorts the order of the original array reference
-// therefore it returns undefined. 
+// therefore it returns undefined.
 var quickSort = function(array, low, high) {
 
+	// Cases for missing arguments on initial sort call.
 	if (typeof low !== 'number') {
 		low = 0;
 	}
-  // Cases for missing arguments on initial sort call.
 	if (typeof high !== 'number') {
 		high = array.length - 1;
 	}
@@ -71,7 +71,7 @@ var quickSort = function(array, low, high) {
 
 
 // Test case.
-var arr;
+var arr = [];
 for (var n = 0; n < 20; n++) {
 	arr.push(Math.ceil(Math.random() * 100));
 }
